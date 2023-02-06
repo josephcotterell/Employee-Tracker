@@ -1,0 +1,19 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "app for tracking employees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephcotterell/Employee-Tracker.git"
+  },
+  "author": "Joseph Cotterell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephcotterell/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/josephcotterell/Employee-Tracker#readme"
+}
