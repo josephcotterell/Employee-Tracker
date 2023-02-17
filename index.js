@@ -65,6 +65,16 @@ const EmployeePrompt = () => {
       }
     });
 };
+const viewAllEmployees = () => {
+  const mysql =
+    "SELECT employee.first_name, employee.last_name, employee.role_id, employee.manager_id FROM employee";
+  connect.query(mysql, (err, rows) => {
+    if (err) throw err;
+    console.table(rows);
+    EmployeePrompt();
+  });
+};
+
 const viewAllDepartments = () => {
   console.log("All departments");
   const mysql = `SELECT department.id, department.name as department FROM department`;
@@ -88,7 +98,7 @@ const viewAllRoles = () => {
   });
 };
 //add department
-addDepartment = () => {
+const addDepartment = () => {
   inquirer
     .prompt([
       {
@@ -107,7 +117,7 @@ addDepartment = () => {
     });
 };
 //add role function
-addRole = () => {
+const addRole = () => {
   inquirer
     .prompt([
       {
@@ -155,7 +165,7 @@ addRole = () => {
     });
 };
 //add employees function
-addEmployee = () => {
+const addEmployee = () => {
   inquirer
     .prompt([
       {
@@ -201,7 +211,7 @@ addEmployee = () => {
 };
 
 //update employee
-updateEmployeeRole = () => {
+const updateEmployeeRole = () => {
   const employeesql = `SELECT * FROM employee`;
 
   connect.query(employeesql, (err, data) => {
